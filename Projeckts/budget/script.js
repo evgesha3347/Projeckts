@@ -1,4 +1,31 @@
 'use strict';
+
+let btn = document.getElementById('start'), //Получить кнопку "Начать расчет" через id
+    budget = document.querySelectorAll('.budget-value')[0],                            
+    daybudget = document.querySelectorAll('.daybudget-value')[0],
+    level = document.querySelectorAll('.level-value')[0],                         //Получить все блоки в правой части программы
+    expenses = document.querySelectorAll('.expenses-value')[0],                   //через классы (которые имеют класс название-value,     
+    optionalexpenses = document.querySelectorAll('.optionalexpenses-value')[0],   //начиная с <div class="budget-value"><
+    incom = document.querySelectorAll('.income-value')[0],                        //div> и заканчивая <div class="yearsavings-value"></div>)
+    monthsavings = document.querySelectorAll('.monthsavings-value')[0],
+    yearsavings = document.querySelectorAll('.yearsavings-value')[0],
+
+    input = document.querySelectorAll('.expenses-item'),     // Получить поля(input) c обязательными расходами через класс. (class=”expenses-item”)
+
+    btnItem = document.getElementsByTagName('button')[0],             // Получить кнопки “Утвердить”
+    btnOptionalExpenses = document.getElementsByTagName('button')[1], // Получить кнопки “Утвердить”
+    btnBudget = document.getElementsByTagName('button')[2],           //и “Рассчитать” через Tag, каждую в своей переменной. 
+
+    optionalexpensesItem = document.querySelectorAll('.optionalexpenses-item'),//Получить поля для ввода необязательных расходов (optionalexpenses-item) при помощи querySelectorAll
+    checkbox = document.querySelector('.checksavings'),                 // Получить оставшиеся поля через querySelector чекбокс
+    chooseIncomeLabel = document.querySelector('.choose-income-label'), // статьи возможного дохода,
+    choosSum = document.querySelector('.choose-sum'),                   // сумма
+    choosePercent = document.querySelector('.choose-percent'),          // процент
+    yearValue = document.querySelector('.year-value'),                  // год
+    monthValue = document.querySelector('.month-value'),                // месяц
+    dayValue = document.querySelector('.day-value');                    // день
+
+
 let money, time;
 
 function start(){
