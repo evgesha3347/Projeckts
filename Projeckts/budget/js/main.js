@@ -29,9 +29,9 @@ let startBtn = document.getElementById('start'), //Получить кнопку
 
 let money, time;
 
-expensesItemBtn.disabled = true;
-optionalExpensesBtn.disabled = true;
-countBudgetBtn.disabled = true;
+// expensesItemBtn.disabled = true;
+// optionalExpensesBtn.disabled = true;
+// countBudgetBtn.disabled = true;
  
 
  
